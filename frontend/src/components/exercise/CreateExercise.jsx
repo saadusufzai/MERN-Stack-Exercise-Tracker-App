@@ -31,10 +31,10 @@ const CreateExercise = () => {
     e.preventDefault();
 
     const exercise = {
-      username: username,
-      description: description,
-      duration: duration,
-      date: date,
+      username,
+      description,
+      duration,
+      date,
     };
     console.log(exercise);
     // window.location = "/";
