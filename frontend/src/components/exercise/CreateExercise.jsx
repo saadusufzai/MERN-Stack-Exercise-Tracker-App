@@ -1,15 +1,28 @@
-import React from "react";
+import React, {useEffect} from "react";
 import { useState } from "react";
 import DatePicker from "react-datepicker";
- 
+import axois from 'axios'
+
 import "react-datepicker/dist/react-datepicker.css";
 
 const CreateExercise = () => {
-  const [username, setUsername] = useState("test user");
+  const [username, setUsername] = useState("");
   const [description, setDescription] = useState("");
   const [duration, setDuratioon] = useState(0);
   const [date, setDate] = useState(new Date());
   const [users, setUsers] = useState(["test user"]);
+
+useEffect(() => {
+    axois.get('http://localhost:5000/users')
+    .then((res)=>{
+        const data = res.data 
+        console.log()
+        setUsers(data.map((e)=>e.username))
+        setUsername(data[0].username)
+    } )
+    .catch(err => console.log(err))
+
+}, [])
 
   const onChangeUsername = (e) => {
     setUsername(e.target.value);
@@ -37,7 +50,10 @@ const CreateExercise = () => {
       date,
     };
     console.log(exercise);
-    // window.location = "/";
+    axois.post('http://localhost:5000/exercises/add', exercise)
+        .then(res=>console.log(res.data))
+        alert('New Exercise Assigned Successfully !')
+        window.location = "/";
   };
 
   return (
