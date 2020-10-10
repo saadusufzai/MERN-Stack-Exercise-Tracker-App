@@ -1,7 +1,7 @@
 # MERN STACK Exercise App Backend
 
 ## Tools Used
-- Express
+- Express ( NodeJs Server)
 - Nodemon
 - Mongoose
 - MongoDB Atlas
