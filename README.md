@@ -1,2 +1,2 @@
-# mern-stack-exercise-tracker-app
+# MERN-stack-exercise-tracker-app
  MERN Stack simple expercise tracker app
