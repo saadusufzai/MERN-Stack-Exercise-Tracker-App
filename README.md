@@ -28,3 +28,6 @@ this app is made using React Functional Components and React Hooks
 - React Router v6 ( npm i react-router-dom@next )
 - React-DatePicker
 - Axios
+
+## Deployment   
+Will deploy this app on netlify 
