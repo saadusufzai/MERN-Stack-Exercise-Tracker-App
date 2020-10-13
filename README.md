@@ -32,7 +32,7 @@ this app is made using React Functional Components and React Hooks
 ## Deployment   
 I have deployed this MERN Stack App on two different platforms 
 
-- Netlify (Frontend)
+- Netlify (Frontend) [link](https://mern-stack-exercise-app.netlify.app/)
 - Heroku  (Backend)
 
 
@@ -101,3 +101,4 @@ Login to Netlify and use the GUI to select your git repo you want to deploay, gi
 
         // After
         const res = await fetch('https://my-project.herokuapp.com/users/')
+
