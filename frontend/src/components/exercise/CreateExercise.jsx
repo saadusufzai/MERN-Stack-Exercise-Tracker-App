@@ -10,7 +10,7 @@ const CreateExercise = () => {
   const [description, setDescription] = useState("");
   const [duration, setDuratioon] = useState(0);
   const [date, setDate] = useState(new Date());
-  const [users, setUsers] = useState([""]);
+  const [users, setUsers] = useState(["test-user"]);
 
 useEffect(() => {
     axois.get('https://mern-stack-simple-exercise-app.herokuapp.com/users')
@@ -50,10 +50,12 @@ useEffect(() => {
       date,
     };
     console.log(exercise);
-    axois.post('https://mern-stack-simple-exercise-app.herokuapp.com/add', exercise)
+    axois.post('https://mern-stack-simple-exercise-app.herokuapp.com/exercises/add', exercise)
         .then(res=>console.log(res.data))
         alert('New Exercise Assigned Successfully !')
-        window.location = "/";
+        setTimeout(() => {
+          window.location = "/";
+        }, 1000);
   };
 
   return (
