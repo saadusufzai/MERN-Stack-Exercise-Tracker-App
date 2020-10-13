@@ -55,5 +55,6 @@ Now for our MongoDB connection to work we must define an environment variable fo
 
 Using the Heroku CLI
 Set a config var
+
         heroku config:set ATLAS_URI=<"Your MONGODB ATLAS URI" >
     
