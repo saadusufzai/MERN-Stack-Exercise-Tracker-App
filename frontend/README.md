@@ -16,7 +16,7 @@ Login to Netlify and use the GUI to select your git repo you want to deploay, gi
 - at any place I used the route localhost:5000,  replaced it with the heroku url
 
         // Before
-        const res = await fetch('http://localhost:5000/scores/'
+        const res = await fetch('http://localhost:5000/users/'
 
         // After
-        const res = await fetch('https://my-project.herokuapp.com/scores/')
+        const res = await fetch('https://my-project.herokuapp.com/users/')
