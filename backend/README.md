@@ -43,6 +43,8 @@ We need to allow access to your MongoDB database now from a new IP address. For 
 BIG NOTE: In a production app you do not want to allow all IP addresses to access your database! You will want to find the specific IP address that hosts your server-side and add just that one as allowed.
 The app I deployed does not contain any sensitive information. It's just a simple card game so no need for me to be super secure. Once more, do not do this for a real production app or even a side project that may contain sensitive information.
 
+create an app using heroku dashboard 
+    
 create a remote connection with Heroku 
 
         heroku git:remote -a <projecct-name>
