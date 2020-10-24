@@ -92,6 +92,17 @@ Set a config var
 
 Login to Netlify and use the GUI to select your git repo you want to deploay, give build and deploay setting and thats it.
 
+## Routing allows you to manage the traffic to and from your Netlify site.
+
+You can enable powerful static routing features like redirects, rewrites, and proxies by defining rules in a site's _redirects file or Netlify configuration file.
+
+- I have created a _redirects file in the public folder and simply added this code
+
+          /* /index.html 200
+          
+  This will enable static routing feature in your App      
+        
+
 ### LASTLY after we deploy our front-end React code we must ensure any requests we're sending from the client-side is changed to use our Heroku URL now instead of localhost.
 
 - at any place I used the route localhost:5000,  replaced it with the heroku url
