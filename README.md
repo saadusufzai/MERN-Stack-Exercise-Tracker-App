@@ -103,7 +103,7 @@ You can enable powerful static routing features like redirects, rewrites, and pr
   This will enable static routing feature in your App      
         
 
-### LASTLY after we deploy our front-end React code we must ensure any requests we're sending from the client-side is changed to use our Heroku URL now instead of localhost.
+### LASTLY after we deploy our front-end React code we must ensure any requests we're sending from the client-side is changed to use our Heroku URL now instead of localhost
 
 - at any place I used the route localhost:5000,  replaced it with the heroku url
 
