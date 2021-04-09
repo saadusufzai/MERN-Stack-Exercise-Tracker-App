@@ -59,7 +59,7 @@ useEffect(() => {
   };
 
   return (
-    <div>
+    <div className="mb-5">
       <h3>Create New Exercise Log</h3>
       <form onSubmit={submit}>
         <div className="form-group">

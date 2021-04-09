@@ -17,4 +17,11 @@ router.route("/add").post((req, res) => {
     .catch((err) => res.status(400).json("Error: " + err));
 });
 
+router.route('/:id').delete((req, res) => {
+  const id = req.params.id;
+  User.findByIdAndDelete(id)
+  .then((users) => res.json({msg: "User deleted!"}))
+  .catch((err) => res.status(400).json("Error: " + err));
+})
+
 module.exports = router
