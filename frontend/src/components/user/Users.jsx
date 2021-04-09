@@ -1,29 +1,38 @@
 import React, { useEffect,useState }from 'react'
 import axios from 'axios'
-
+import { Link } from "react-router-dom";
 const Users = () => {
 
-  const [username, setUsername] = useState()
+  const [user, setUser] = useState([])
 
   useEffect(() => {
-    const config = {
+   
+    axios.get('https://mern-stack-simple-exercise-app.herokuapp.com/users')
+    .then( async(res)=>{
+     const data = await res.data
+       setUser(data)
     
-    header : {
-      "Access-Control-Allow-Origin" : "",
-      "Allow": "GET",
-      "Content-type": "Application/json",
-    }
-  }
-    axios.get('localhost:5000/users/',config)
-    .then((res)=>{
-      console.log(res)
-      setUsername(res)
-
     })
     .catch(err=>console.error(err))
 
   },[])
 
+  const deleteUser = (id)=>{
+    axios.delete('https://mern-stack-simple-exercise-app.herokuapp.com/users/'+id)
+     .then(res=> console.log(res.data))
+     setUser(user.filter(e => e._id !== id))
+}
+
+console.log(user)
+
+  const UserList =()=>{
+    return (
+      user?.map(u => (
+        <User user={u} deleteUser={deleteUser} key={u._id} />
+        ))
+        )
+      }
+  
 
 
     return (
@@ -38,11 +47,21 @@ const Users = () => {
         </tr>
       </thead>
       <tbody>
-        {/* { <ExerciseList/> } */}
+        { <UserList/> }
       </tbody>
     </table> 
         </div>
     )
-}
 
+  }
 export default Users
+
+const User = ({user,deleteUser})=> (
+  <tr>
+      <td>{user.username}</td>
+      <td>{user.createdAt.substring(0,10)}</td>
+      <td>
+         Delete User  <a href="#" onClick={()=>deleteUser(user._id)} ><i style={{color:"red"}} className="fa fa-trash"></i></a>
+      </td>
+  </tr>
+)
