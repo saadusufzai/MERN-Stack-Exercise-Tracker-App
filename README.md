@@ -78,7 +78,7 @@ create a remote connection with Heroku
 
 The command we need to push our server code specifically, because we have the separation of client and server in our project structure, is git subtree push --prefix server heroku master
 
-        git subtree push --prefix server heroku master
+        git subtree push --prefix backend heroku master
 
 Now for our MongoDB connection to work we must define an environment variable for Heroku to store our MongoDB connection string.       
 
@@ -105,7 +105,7 @@ You can enable powerful static routing features like redirects, rewrites, and pr
 
 ### LASTLY after we deploy our front-end React code we must ensure any requests we're sending from the client-side is changed to use our Heroku URL now instead of localhost
 
-- at any place I used the route localhost:5000,  replaced it with the heroku url
+- at any place the route localhost:5000,  replaced with the heroku url
 
         // Before
         const res = await fetch('http://localhost:5000/users/'
