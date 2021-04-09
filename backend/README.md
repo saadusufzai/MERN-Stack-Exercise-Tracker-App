@@ -26,7 +26,7 @@ Create a file named Procfile, no file extension, in /server directory.
 
 Include this text and this text only in the Procfile
 
-        web: node dist/main.js
+        web: node server.js
 
 This tells Heroku what to do after building our app - which specifically is to run our bundled file from webpack with all of our server logic inside it
 If we didn't include this it would likely build just fine but never actually start our server
