@@ -15,7 +15,7 @@ const CreateUser = () => {
     };
     console.log(newUser);
     
-    axios.post('http://localhost:5000/users/add', newUser)
+    axios.post('https://mern-stack-simple-exercise-app.herokuapp.com/users/add', newUser)
         .then(res => console.log(res.data))
         alert('User Added Successfully!')
     setUsername("");

@@ -7,7 +7,7 @@ const ExercisesList = () => {
   const [exercises, setExercises] = useState([]);
   useEffect(() => {
     axios
-      .get("http://localhost:5000/exercises/")
+      .get("https://mern-stack-simple-exercise-app.herokuapp.com/exercises/")
       .then((res) => {
         console.log(res.data);
         setExercises(res.data);
@@ -16,7 +16,7 @@ const ExercisesList = () => {
   }, []);
 
   const deleteExercise = (id)=>{
-      axios.delete('http://localhost:5000/exercises/'+id)
+      axios.delete('https://mern-stack-simple-exercise-app.herokuapp.com/exercises/'+id)
        .then(res=> console.log(res.data))
        setExercises(exercises.filter(e => e._id !== id))
   }

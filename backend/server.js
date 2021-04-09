@@ -16,6 +16,7 @@ const userRouter = require('./routes/users');
 app.use('/exercises', exerciseRouter);
 app.use('/users', userRouter)
 
+
 app.listen(port, () => {
   console.log(`Server is runnuing on port: ${port}`);
   const uri = process.env.ATLAS_URI;
@@ -28,5 +29,3 @@ app.listen(port, () => {
     })
 
 });
-
-  

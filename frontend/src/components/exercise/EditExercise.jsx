@@ -14,7 +14,9 @@ const EditExercise = () => {
   const param = useParams().id;
   useEffect(() => {
     axois
-      .get(`http://localhost:5000/exercises/${param}`)
+      .get(
+        `http://mern-stack-simple-exercise-app.herokuapp.com/exercises/${param}`
+      )
       .then((res) => {
         const data = res.data;
         console.log(data.username);
@@ -53,10 +55,16 @@ const EditExercise = () => {
     };
     console.log(exercise);
     axois
-      .post(`http://localhost:5000/exercises/update/${param}`, exercise)
+      .post(
+        `https://mern-stack-simple-exercise-app.herokuapp.com/exercises/update/${param}`,
+        exercise
+      )
       .then((res) => console.log(res.data));
-    alert("Exercise Updated Successfully !");
-    window.location = "/";
+
+    alert("Exercise Updated Successfully ");
+    setTimeout(() => {
+      window.location = "/";
+    }, 1000);
   };
 
   return (
