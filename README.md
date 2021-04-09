@@ -1,4 +1,4 @@
-# MERN-Stack-Exercise-Tracker-App
+# MERN Stack Exercise Tracker App complete CRUD  App
 
 ## Tools Used 
 - MongoDB
