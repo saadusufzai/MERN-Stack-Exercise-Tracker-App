@@ -13,7 +13,7 @@ function App() {
   return (
     <Router>
       <Navbar/>
-      <div className='container'>     <Routes>
+      <div className='container p-4'>     <Routes>
         <Route path='/' element={<ExercisesList/>}/>
         <Route path='/edit/:id' element={<EditExercise/>}/>
         <Route path='/create' element={<CreateExercise/>}/>
