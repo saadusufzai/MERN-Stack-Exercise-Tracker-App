@@ -11,3 +11,32 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+
+/* FOOTER */
+.footer {
+  position: fixed;
+  width: 100%;
+  text-align: center;
+  bottom: 0;
+  background-color: #292929;
+  min-height: 50px;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+}
+.innerFooter {
+  text-transform: uppercase;
+  align-self: center;
+  letter-spacing: 0.3rem;
+}
+.footer a {
+  color: rgba(0, 252, 176, 0.651);
+  text-decoration: none;
+  letter-spacing: 0.3rem;
+}
+
+.footer a:hover {
+  color: #fff;
+  cursor: pointer;
+}

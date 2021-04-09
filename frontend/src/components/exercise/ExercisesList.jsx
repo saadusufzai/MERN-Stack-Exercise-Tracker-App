@@ -59,7 +59,7 @@ const Exercise = ({exercise,deleteExercise})=> (
         <td>{exercise.duration}</td>
         <td>{exercise.date.substring(0,10)}</td>
         <td>
-            <Link to={'/edit/'+exercise._id} >Edit</Link> | <a href="#" onClick={()=>deleteExercise(exercise._id)} >Delete</a>
+            <Link to={'/edit/'+exercise._id} ><i class="fa fa-pencil-square-o" aria-hidden="true"></i></Link> | <a href="#" onClick={()=>deleteExercise(exercise._id)} ><i style={{color:"red"}} class="fa fa-trash"></i></a>
         </td>
     </tr>
 )
