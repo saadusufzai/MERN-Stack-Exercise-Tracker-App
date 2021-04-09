@@ -8,6 +8,7 @@ import Footer from './components/footer/Footer'
 import ExercisesList from "./components/exercise/ExercisesList";
 import EditExercise from "./components/exercise/EditExercise";
 import CreateExercise from "./components/exercise/CreateExercise";
+import Users from './components/user/Users';
 import CreateUser from "./components/user/CreateUser";
 
 
@@ -21,7 +22,8 @@ function App() {
         <Route path='/' element={<ExercisesList/>}/>
         <Route path='/edit/:id' element={<EditExercise/>}/>
         <Route path='/create' element={<CreateExercise/>}/>
-        <Route path='/user' element={<CreateUser/>}/>
+        <Route path='/users' element={<Users/>}/>
+        <Route path='/create-user' element={<CreateUser/>}/>
       </Routes>
       </div>
       <Footer/>
