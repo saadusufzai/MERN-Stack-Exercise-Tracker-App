@@ -14,7 +14,7 @@ router.route("/").get((req, res) => {
 });
 
 /**
- * @route   GET users/add
+ * @route   POST users/add
  * @desc    Add new User
  * @access  Public
  */
