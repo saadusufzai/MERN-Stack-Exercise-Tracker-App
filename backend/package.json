@@ -1,17 +1,18 @@
 {
   "name": "backend",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "version": "1.1.0",
+  "description": "mern-stack-simple-exercise-app",
+  "main": "server.js",
   "engines": {
     "node": "12.16.3",
     "npm": "6.14.4"
 },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "saad aslam",
   "license": "ISC",
   "dependencies": {
     "cors": "^2.8.5",
