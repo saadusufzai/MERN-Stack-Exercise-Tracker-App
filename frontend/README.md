@@ -20,3 +20,6 @@ Login to Netlify and use the GUI to select your git repo you want to deploay, gi
 
         // After
         const res = await fetch('https://my-project.herokuapp.com/users/')
+
+You can also create .env file and store URL there in a url variable
+then change it at only one place and it will be replaced on all places.
