@@ -6,7 +6,13 @@ import axois from 'axios'
 import "react-datepicker/dist/react-datepicker.css";
 
 const CreateExercise = () => {
+  const [username, setUsername] = useState("");
+  const [description, setDescription] = useState("");
+  const [duration, setDuratioon] = useState(0);
+  const [date, setDate] = useState(new Date());
+  const [users, setUsers] = useState(["test-user"]);
 
+  
 
 useEffect(() => {
     axois.get('https://mern-stack-simple-exercise-app.herokuapp.com/users')
